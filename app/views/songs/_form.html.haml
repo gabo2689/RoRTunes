@@ -1,0 +1,23 @@
+= render partial: "shared/print_errors", locals: { obj: @song }
+
+
+
+= form_for [@song] do |f|
+  .field
+    = f.label :title, "Title"
+    = f.text_field :title
+
+  .field
+    = f.label :duration, "Duration"
+    = f.text_field :duration
+
+
+  .field
+    = f.label :music_and_lyric, "Music and Lyric"
+    = f.text_field :music_and_lyric
+
+
+
+
+  .field
+    = f.submit

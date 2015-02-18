@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RoRTune</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navigation">
+    <table>
+        <tr>
+            <td><%= link_to "HOME", root_path %></td>
+            <td><%= link_to "SINGERS", singers_path %></td>
+            <td><%= link_to "ALBUMS", albums_path %></td>
+
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+%h1 Singer List
+
+
+
+%table{border:"1"}
+  %tr
+    %td Title
+    %td Singer
+    %td Created At
+  = render @albums
+
+
+%p
+  =link_to "New Album", new_album_path

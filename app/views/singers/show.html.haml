@@ -1,0 +1,16 @@
+%h1= @singer.name
+%p
+  %strong Gender
+  = @singer.gender
+%p
+  %strong Singer Type
+  = @singer.singer_type
+%p
+  %strong Twitter
+  = @singer.twitter
+%p
+  %strong Albums
+  =@singer.albums.count
+
+%p
+  = link_to "Edit", edit_singer_path(@singer)

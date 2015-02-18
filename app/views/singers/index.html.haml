@@ -1,0 +1,16 @@
+%h1 Singer List
+
+- if flash[:notice].present?
+  .notice
+    = flash[:notice]
+
+%table{border:"1"}
+  %tr
+    %td Name
+    %td Twitter
+    %td Albums Count
+  = render @singers
+
+
+
+%p= link_to "New Singer" , new_singer_path

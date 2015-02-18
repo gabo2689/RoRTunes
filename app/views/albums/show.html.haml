@@ -1,0 +1,26 @@
+- if flash[:notice].present?
+  .notice
+    = flash[:notice]
+
+
+
+%h1
+  = @album.title
+
+%p
+  %strong Singer
+  = @album.singer.name
+
+
+%p
+  %strong Price
+  = @album.price
+%p
+  %strong Production Label
+  = @album.production_label
+
+
+
+%p
+  =link_to "Add Song",  new_album_song_path(@album)
+
