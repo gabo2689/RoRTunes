@@ -21,6 +21,40 @@
 
 
 
+
+%table
+  %tr
+    %td Title
+    %td Duration
+    %td Music and Lyric
+    %td Delete
+
+
+  - @song_by_album.each do |so|
+    %tr
+      %td= so.title
+      %td= so.duration
+      %td= so.music_and_lyric
+      %td= link_to 'Destroy', album_song_path(@album,so.id), method: :delete, data:{confirm:'Are you sure?'}
+
+
+
+
+%br
+
+
 %p
-  =link_to "Add Song",  new_album_song_path(@album)
+  Cantidad de Canciones Disponibles #{@song_by_album.count}
+
+%p
+  Duracion del album #{get_duracion.sum(:duration)} min
+
+
+
+
+
+%p
+  =link_to "Add Song", new_album_song_path(params[:id])
+
+  #new_album_song_pathalbum
 

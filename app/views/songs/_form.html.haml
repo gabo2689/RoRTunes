@@ -1,8 +1,8 @@
+
+
 = render partial: "shared/print_errors", locals: { obj: @song }
 
-
-
-= form_for [@song] do |f|
+= form_for @song, :url => album_songs_path(params[:album_id]), :method => :post  do |f|
   .field
     = f.label :title, "Title"
     = f.text_field :title

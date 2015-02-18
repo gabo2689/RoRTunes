@@ -22,6 +22,9 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+
+    @song_by_album = Song.where(album_id: @album)
+
   end
 
 
